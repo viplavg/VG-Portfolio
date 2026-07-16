@@ -1,0 +1,128 @@
+.contact {
+  padding-block: 8rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.contact__content {
+  max-width: 760px;
+  margin-inline: auto;
+
+  text-align: center;
+}
+
+.contact__eyebrow {
+  margin-bottom: var(--space-sm);
+
+  color: var(--accent-primary);
+
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact__title {
+  color: var(--text-primary);
+
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.contact__description {
+  max-width: 650px;
+  margin: var(--space-lg) auto 0;
+
+  color: var(--text-secondary);
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.contact__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+
+  margin-top: var(--space-2xl);
+}
+
+.contact__actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+
+  min-height: 48px;
+  padding-inline: var(--space-xl);
+}
+
+.contact__secondary-button {
+  color: var(--text-primary);
+  background-color: transparent;
+
+  border: 1px solid var(--border-color);
+}
+
+.contact__secondary-button:hover {
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
+}
+
+.contact__socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+
+  margin-top: var(--space-xl);
+}
+
+.contact__socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  color: var(--text-secondary);
+
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+
+  font-size: 1.1rem;
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.contact__socials a:hover {
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding-block: 6rem;
+  }
+
+  .contact__description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact__actions {
+    flex-direction: column;
+  }
+
+  .contact__actions .btn {
+    width: 100%;
+  }
+}
