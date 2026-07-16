@@ -1,0 +1,30 @@
+.section-heading {
+  max-width: 720px;
+  margin-bottom: var(--space-2xl);
+}
+
+.section-heading__eyebrow {
+  display: inline-block;
+  margin-bottom: var(--space-sm);
+
+  color: var(--accent-primary);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section-heading__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.section-heading__description {
+  margin-top: var(--space-md);
+
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
