@@ -1,44 +1,55 @@
+import SectionHeading from "../../components/SectionHeading/SectionHeading";
+import { experienceData } from "../../data/experienceData";
 import "./Experience.css";
 
 const Experience = () => {
   return (
-    <section id="experience" className="experience section">
+    <section id="experience" className="experience">
       <div className="container">
-        <div className="section-heading">
-          <span className="section-heading__eyebrow">Experience</span>
+        <SectionHeading
+          eyebrow="Experience"
+          title="Building production-grade web applications across industries."
+          description="My experience spans frontend architecture, full-stack development, performance optimization, API development, and cross-functional product delivery."
+        />
 
-          <h2 className="section-heading__title">
-            Nearly 5 years of building reliable web products.
-          </h2>
+        <div className="experience__timeline">
+          {experienceData.map((experience) => (
+            <article key={experience.id} className="experience-item">
+              <div className="experience-item__marker" aria-hidden="true" />
 
-          <p className="section-heading__description">
-            I have worked across frontend and backend development, with a
-            strong focus on React applications, reusable architecture,
-            performance, and maintainable code.
-          </p>
-        </div>
+              <div className="experience-item__content">
+                <div className="experience-item__header">
+                  <div>
+                    <h3 className="experience-item__role">
+                      {experience.role}
+                    </h3>
 
-        <div className="experience__grid">
-          <article className="experience-card">
-            <span className="experience-card__value">5+</span>
-            <span className="experience-card__label">
-              Years of experience
-            </span>
-          </article>
+                    <p className="experience-item__company">
+                      {experience.company}
+                      <span aria-hidden="true"> • </span>
+                      <span>{experience.location}</span>
+                    </p>
+                  </div>
 
-          <article className="experience-card">
-            <span className="experience-card__value">React</span>
-            <span className="experience-card__label">
-              Core frontend expertise
-            </span>
-          </article>
+                  <time className="experience-item__duration">
+                    {experience.duration}
+                  </time>
+                </div>
 
-          <article className="experience-card">
-            <span className="experience-card__value">Node.js</span>
-            <span className="experience-card__label">
-              Backend and API development
-            </span>
-          </article>
+                <ul className="experience-item__highlights">
+                  {experience.highlights.map((highlight) => (
+                    <li key={highlight}>{highlight}</li>
+                  ))}
+                </ul>
+
+                <div className="experience-item__technologies">
+                  {experience.technologies.map((technology) => (
+                    <span key={technology}>{technology}</span>
+                  ))}
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>
