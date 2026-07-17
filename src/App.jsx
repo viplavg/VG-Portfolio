@@ -1,3 +1,4 @@
+import BackToTop from "./components/BackToTop/BackToTop";
 import Navbar from "./components/Navbar/Navbar";
 import useTheme from "./hooks/useTheme";
 import Contact from "./sections/Contact/Contact";
@@ -20,8 +21,9 @@ function App() {
           <Skills />
           <Projects />
           <Contact />
-          <Footer />
       </main>
+          <Footer />
+          <BackToTop />
     </>
   );
 }
