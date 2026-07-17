@@ -22,3 +22,9 @@
     text-align: center;
   }
 }
+
+@media (max-width: 600px) {
+  .footer__content {
+    font-size: 0.85rem;
+  }
+}

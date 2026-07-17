@@ -182,3 +182,35 @@
     width: 100%;
   }
 }
+
+@media (max-width: 600px) {
+  .projects {
+    padding-block: 6rem;
+  }
+
+  .project-card {
+    padding: var(--space-lg);
+  }
+
+  .project-card__title {
+    font-size: 1.45rem;
+  }
+
+  .project-card__description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .project-card__technologies {
+    gap: var(--space-xs);
+  }
+
+  .project-card__technologies span {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.82rem;
+  }
+
+  .project-card__actions {
+    gap: var(--space-sm);
+  }
+}

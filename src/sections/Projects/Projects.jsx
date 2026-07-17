@@ -21,50 +21,61 @@ const Projects = () => {
         />
 
         <div className="projects__featured">
-          {featuredProjects.map((project) => (
-            <article
-              key={project.id}
-              className="project-card"
-            >
-              <div className="project-card__content">
-                <p className="project-card__label">
-                  Featured Project
-                </p>
+          {featuredProjects.map((project) => {
+            const hasProjectLinks =
+              project.githubUrl || project.liveUrl;
 
-                <h3 className="project-card__title">
-                  {project.title}
-                </h3>
+            return (
+              <article
+                key={project.id}
+                className="project-card"
+              >
+                <div className="project-card__content">
+                  <p className="project-card__label">
+                    Featured Project
+                  </p>
 
-                <p className="project-card__description">
-                  {project.description}
-                </p>
+                  <h3 className="project-card__title">
+                    {project.title}
+                  </h3>
 
-                <div className="project-card__technologies">
-                  {project.technologies.map((tech) => (
-                    <span key={tech}>{tech}</span>
-                  ))}
+                  <p className="project-card__description">
+                    {project.description}
+                  </p>
+
+                  <div className="project-card__technologies">
+                    {project.technologies.map((tech) => (
+                      <span key={tech}>{tech}</span>
+                    ))}
+                  </div>
+
+                  {hasProjectLinks && (
+                    <div className="project-card__actions">
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          GitHub
+                        </a>
+                      )}
+
+                      {project.liveUrl && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          Live Demo
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </div>
-
-                <div className="project-card__actions">
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    GitHub
-                  </a>
-
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Live Demo
-                  </a>
-                </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            );
+          })}
         </div>
 
         {otherProjects.length > 0 && (
@@ -73,26 +84,55 @@ const Projects = () => {
               Other Projects
             </h3>
 
-            {otherProjects.map((project) => (
-              <article
-                key={project.id}
-                className="project-card project-card--compact"
-              >
-                <h4 className="project-card__title">
-                  {project.title}
-                </h4>
+            {otherProjects.map((project) => {
+              const hasProjectLinks =
+                project.githubUrl || project.liveUrl;
 
-                <p className="project-card__description">
-                  {project.description}
-                </p>
+              return (
+                <article
+                  key={project.id}
+                  className="project-card project-card--compact"
+                >
+                  <h4 className="project-card__title">
+                    {project.title}
+                  </h4>
 
-                <div className="project-card__technologies">
-                  {project.technologies.map((tech) => (
-                    <span key={tech}>{tech}</span>
-                  ))}
-                </div>
-              </article>
-            ))}
+                  <p className="project-card__description">
+                    {project.description}
+                  </p>
+
+                  <div className="project-card__technologies">
+                    {project.technologies.map((tech) => (
+                      <span key={tech}>{tech}</span>
+                    ))}
+                  </div>
+
+                  {hasProjectLinks && (
+                    <div className="project-card__actions">
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          GitHub
+                        </a>
+                      )}
+
+                      {project.liveUrl && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          Live Demo
+                        </a>
+                      )}
+                    </div>
+                  )}
+                </article>
+              );
+            })}
           </div>
         )}
       </div>
