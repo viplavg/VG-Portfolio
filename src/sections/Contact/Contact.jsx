@@ -1,8 +1,10 @@
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-import "./Contact.css";
+
 import Reveal from "../../components/Reveal/Reveal";
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
+
+import "./Contact.css";
 
 const Contact = () => {
   return (
@@ -20,8 +22,11 @@ const Contact = () => {
           <Reveal delay={0.15}>
             <div className="contact__actions">
               <a
-                href="mailto:viplavg1999@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=viplavg1999@gmail.com"
+                target="_blank"
+                rel="noreferrer"
                 className="btn btn-primary"
+                aria-label="Send an email to Viplav Gupta"
               >
                 <HiOutlineMail aria-hidden="true" />
                 Email Me
@@ -32,6 +37,7 @@ const Contact = () => {
                 target="_blank"
                 rel="noreferrer"
                 className="btn contact__secondary-button"
+                aria-label="Visit Viplav Gupta's LinkedIn profile"
               >
                 <FaLinkedinIn aria-hidden="true" />
                 LinkedIn
