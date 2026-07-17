@@ -161,7 +161,8 @@ const Navbar = () => {
           {renderNavLinks(true)}
 
           <a
-            href="/resume.pdf"
+            href="/ViplavGupta_Resume.pdf"
+            download="ViplavGupta_Resume.pdf"
             className="btn btn-primary navbar__mobile-resume"
             target="_blank"
             rel="noreferrer"

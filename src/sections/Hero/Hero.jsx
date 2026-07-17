@@ -26,7 +26,7 @@ const Hero = () => {
 
             <a
               href="/ViplavGupta_Resume.pdf"
-              download="Viplav_Gupta_Resume.pdf"
+              download="ViplavGupta_Resume.pdf"
               className="btn btn--secondary"
             >
               Download Resume
