@@ -40,6 +40,8 @@
 }
 
 .navbar__links a {
+  position: relative;
+
   color: var(--text-secondary);
 
   font-weight: 500;
@@ -47,8 +49,32 @@
   transition: color 0.2s ease;
 }
 
-.navbar__links a:hover {
+.navbar__links a::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: var(--accent-primary);
+
+  transform: scaleX(0);
+  transform-origin: center;
+
+  transition: transform 0.2s ease;
+}
+
+.navbar__links a:hover,
+.navbar__links .navbar__link--active {
   color: var(--accent-primary);
+}
+
+.navbar__links a:hover::after,
+.navbar__links .navbar__link--active::after {
+  transform: scaleX(1);
 }
 
 /* Right-side actions */
@@ -145,11 +171,6 @@
     margin-left: auto;
   }
 
-  /*
-    Desktop resume ko hide karega.
-    Class missing/mismatched ho tab bhi actions ke andar ka anchor hide hoga.
-  */
-
   .navbar__actions > a,
   .navbar__resume-button {
     display: none;
@@ -207,10 +228,17 @@
 
     font-weight: 600;
 
-    transition: color 0.2s ease;
+    transition:
+      color 0.2s ease,
+      transform 0.2s ease;
   }
 
   .navbar__mobile-menu > a:hover {
+    color: var(--accent-primary);
+    transform: translateX(4px);
+  }
+
+  .navbar__mobile-menu > .navbar__link--active {
     color: var(--accent-primary);
   }
 
@@ -237,5 +265,6 @@
   .navbar__mobile-menu .navbar__mobile-resume:hover {
     color: #ffffff;
     background-color: var(--accent-hover);
+    transform: none;
   }
 }

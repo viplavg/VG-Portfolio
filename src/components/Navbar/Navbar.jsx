@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   HiOutlineMenuAlt3,
   HiOutlineMoon,
@@ -19,11 +19,73 @@ const navLinks = [
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
+
+  const toggleMenu = () => {
+    setIsMenuOpen((previousState) => !previousState);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const navbarOffset = 140;
+      const scrollPosition = window.scrollY + navbarOffset;
+
+      let currentSection = "home";
+
+      navLinks.forEach((link) => {
+        const sectionId = link.href.replace("#", "");
+        const section = document.getElementById(sectionId);
+
+        if (section && scrollPosition >= section.offsetTop) {
+          currentSection = sectionId;
+        }
+      });
+
+      setActiveSection(currentSection);
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleNavClick = (sectionId, isMobile = false) => {
+    setActiveSection(sectionId);
+
+    if (isMobile) {
+      closeMenu();
+    }
+  };
+
+  const renderNavLinks = (isMobile = false) =>
+    navLinks.map((link) => {
+      const sectionId = link.href.replace("#", "");
+      const isActive = activeSection === sectionId;
+
+      return (
+        <a
+          key={link.id}
+          href={link.href}
+          className={isActive ? "navbar__link--active" : ""}
+          onClick={() => handleNavClick(sectionId, isMobile)}
+          aria-current={isActive ? "page" : undefined}
+        >
+          {link.label}
+        </a>
+      );
+    });
 
   return (
     <header className="navbar">
@@ -32,18 +94,14 @@ const Navbar = () => {
           <a
             href="#home"
             className="navbar__logo"
-            onClick={closeMenu}
+            onClick={() => handleNavClick("home", true)}
             aria-label="Go to homepage"
           >
             VG
           </a>
 
           <nav className="navbar__links" aria-label="Primary navigation">
-            {navLinks.map((link) => (
-              <a key={link.id} href={link.href}>
-                {link.label}
-              </a>
-            ))}
+            {renderNavLinks()}
           </nav>
 
           <div className="navbar__actions">
@@ -76,13 +134,9 @@ const Navbar = () => {
             <button
               type="button"
               className="navbar__menu-button"
-              onClick={() => {
-                setIsMenuOpen((previousState) => !previousState);
-              }}
+              onClick={toggleMenu}
               aria-label={
-                isMenuOpen
-                  ? "Close navigation menu"
-                  : "Open navigation menu"
+                isMenuOpen ? "Close navigation menu" : "Open navigation menu"
               }
               aria-expanded={isMenuOpen}
               aria-controls="mobile-navigation"
@@ -102,16 +156,9 @@ const Navbar = () => {
             isMenuOpen ? "navbar__mobile-menu--open" : ""
           }`}
           aria-label="Mobile navigation"
+          aria-hidden={!isMenuOpen}
         >
-          {navLinks.map((link) => (
-            <a
-              key={link.id}
-              href={link.href}
-              onClick={closeMenu}
-            >
-              {link.label}
-            </a>
-          ))}
+          {renderNavLinks(true)}
 
           <a
             href="/resume.pdf"
