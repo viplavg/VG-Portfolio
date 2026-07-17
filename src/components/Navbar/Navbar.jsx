@@ -123,7 +123,7 @@ const Navbar = () => {
             </button>
 
             <a
-              href="/resume.pdf"
+              href="/ViplavGupta_Resume.pdf"
               className="btn btn-primary navbar__resume-button"
               target="_blank"
               rel="noreferrer"
@@ -162,7 +162,6 @@ const Navbar = () => {
 
           <a
             href="/ViplavGupta_Resume.pdf"
-            download="ViplavGupta_Resume.pdf"
             className="btn btn-primary navbar__mobile-resume"
             target="_blank"
             rel="noreferrer"
