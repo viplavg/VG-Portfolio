@@ -1,136 +1,123 @@
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
 import { projectsData } from "../../data/projectsData";
+import Reveal from "../../components/Reveal/Reveal";
 import "./Projects.css";
 
 const Projects = () => {
-  const featuredProjects = projectsData.filter(
-    (project) => project.featured
-  );
+  const featuredProjects = projectsData.filter((project) => project.featured);
 
-  const otherProjects = projectsData.filter(
-    (project) => !project.featured
-  );
+  const otherProjects = projectsData.filter((project) => !project.featured);
 
   return (
     <section id="projects" className="projects">
       <div className="container">
-        <SectionHeading
-          eyebrow="Projects"
-          title="Projects I've built and continue to improve."
-          description="A collection of full-stack applications focused on real-world workflows, scalability, and user experience."
-        />
+        <Reveal direction="right">
+          <SectionHeading
+            eyebrow="Projects"
+            title="Projects I've built and continue to improve."
+            description="A collection of full-stack applications focused on real-world workflows, scalability, and user experience."
+          />
+        </Reveal>
 
         <div className="projects__featured">
-          {featuredProjects.map((project) => {
-            const hasProjectLinks =
-              project.githubUrl || project.liveUrl;
+          {featuredProjects.map((project, index) => {
+            const hasProjectLinks = project.githubUrl || project.liveUrl;
 
             return (
-              <article
-                key={project.id}
-                className="project-card"
-              >
-                <div className="project-card__content">
-                  <p className="project-card__label">
-                    Featured Project
-                  </p>
+              <Reveal key={project.id} delay={index * 0.1}>
+                <article className="project-card">
+                  <div className="project-card__content">
+                    <p className="project-card__label">Featured Project</p>
 
-                  <h3 className="project-card__title">
-                    {project.title}
-                  </h3>
+                    <h3 className="project-card__title">{project.title}</h3>
 
-                  <p className="project-card__description">
-                    {project.description}
-                  </p>
+                    <p className="project-card__description">
+                      {project.description}
+                    </p>
 
-                  <div className="project-card__technologies">
-                    {project.technologies.map((tech) => (
-                      <span key={tech}>{tech}</span>
-                    ))}
-                  </div>
-
-                  {hasProjectLinks && (
-                    <div className="project-card__actions">
-                      {project.githubUrl && (
-                        <a
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          GitHub
-                        </a>
-                      )}
-
-                      {project.liveUrl && (
-                        <a
-                          href={project.liveUrl}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          Live Demo
-                        </a>
-                      )}
+                    <div className="project-card__technologies">
+                      {project.technologies.map((tech) => (
+                        <span key={tech}>{tech}</span>
+                      ))}
                     </div>
-                  )}
-                </div>
-              </article>
+
+                    {hasProjectLinks && (
+                      <div className="project-card__actions">
+                        {project.githubUrl && (
+                          <a
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            GitHub
+                          </a>
+                        )}
+
+                        {project.liveUrl && (
+                          <a
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            Live Demo
+                          </a>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                </article>
+              </Reveal>
             );
           })}
         </div>
 
         {otherProjects.length > 0 && (
           <div className="projects__other">
-            <h3 className="projects__other-title">
-              Other Projects
-            </h3>
+            <h3 className="projects__other-title">Other Projects</h3>
 
-            {otherProjects.map((project) => {
-              const hasProjectLinks =
-                project.githubUrl || project.liveUrl;
+            {otherProjects.map((project, idx) => {
+              const hasProjectLinks = project.githubUrl || project.liveUrl;
 
               return (
-                <article
-                  key={project.id}
-                  className="project-card project-card--compact"
-                >
-                  <h4 className="project-card__title">
-                    {project.title}
-                  </h4>
+                <Reveal key={project.id} delay={idx * 0.1}>
+                  <article className="project-card project-card--compact">
+                    <h4 className="project-card__title">{project.title}</h4>
 
-                  <p className="project-card__description">
-                    {project.description}
-                  </p>
+                    <p className="project-card__description">
+                      {project.description}
+                    </p>
 
-                  <div className="project-card__technologies">
-                    {project.technologies.map((tech) => (
-                      <span key={tech}>{tech}</span>
-                    ))}
-                  </div>
-
-                  {hasProjectLinks && (
-                    <div className="project-card__actions">
-                      {project.githubUrl && (
-                        <a
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          GitHub
-                        </a>
-                      )}
-
-                      {project.liveUrl && (
-                        <a
-                          href={project.liveUrl}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          Live Demo
-                        </a>
-                      )}
+                    <div className="project-card__technologies">
+                      {project.technologies.map((tech) => (
+                        <span key={tech}>{tech}</span>
+                      ))}
                     </div>
-                  )}
-                </article>
+
+                    {hasProjectLinks && (
+                      <div className="project-card__actions">
+                        {project.githubUrl && (
+                          <a
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            GitHub
+                          </a>
+                        )}
+
+                        {project.liveUrl && (
+                          <a
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            Live Demo
+                          </a>
+                        )}
+                      </div>
+                    )}
+                  </article>
+                </Reveal>
               );
             })}
           </div>
