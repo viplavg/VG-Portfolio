@@ -11,7 +11,7 @@ const Hero = () => {
 
           <h1 className="hero__title">
             Full-Stack Software Engineer
-            <span>focused on scalable React products.</span>
+            <span>focused on scalable full-stack applications.</span>
           </h1>
 
           <p className="hero__description">
@@ -80,7 +80,8 @@ const Hero = () => {
                         "Node.js",
                         "MongoDB",
                         "Java",
-                        "Spring Boot"
+                        "Spring Boot",
+                        "PostgreSQL"
                     ]
                     };`}
             </pre>
