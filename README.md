@@ -1,16 +1,142 @@
-# React + Vite
+# Viplav Gupta | Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Portfolio Preview](./preview/portfolio-preview.png)
 
-Currently, two official plugins are available:
+A modern, responsive developer portfolio showcasing my professional experience, technical skills, and full-stack software projects built with React, Node.js, Java, and Spring Boot.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🌐 **Live Portfolio:** https://viplavgupta-portfolio.vercel.app/
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Tech Stack
 
-## Expanding the ESLint configuration
+### Frontend
+- React.js
+- JavaScript (ES6+)
+- Vite
+- CSS3
+- Framer Motion
+- React Icons
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Backend
+- Node.js
+- Express.js
+- Java
+- Spring Boot
+- Spring Security
+- Spring Data JPA
+- REST APIs
+
+### Database
+- MongoDB
+- PostgreSQL
+
+---
+
+## ✨ Features
+
+- Responsive design for desktop, tablet, and mobile
+- Light & Dark theme support
+- Smooth animations powered by Framer Motion
+- Modular and reusable component architecture
+- Professional experience timeline
+- Featured project showcase
+- Resume download
+- SEO-friendly metadata
+- Clean and scalable codebase
+
+---
+
+## 📂 Featured Projects
+
+### 🎫 SupportDesk
+
+A production-focused customer support platform that enables customers, agents, and administrators to efficiently manage support tickets through a secure role-based workflow.
+
+**Highlights**
+- JWT Authentication & Authorization
+- Role-Based Access Control (Customer, Agent & Admin)
+- Ticket lifecycle management
+- Pagination, Sorting, Filtering & Search
+- RESTful API architecture
+- MongoDB integration
+- React Query for efficient data fetching
+- Scalable and maintainable architecture
+
+> 🚧 **Currently under active development.** New features and live demo will be available soon.
+
+---
+
+### 🔄 Shift Swap Management System
+
+A workflow-driven application that enables employees to request shift swaps while managers review, approve, or reject requests through a secure approval workflow.
+
+**Highlights**
+- JWT Authentication
+- Role-Based Authorization
+- Shift Swap Approval Workflow
+- RESTful APIs
+- MongoDB Integration
+- Audit-friendly workflow design
+
+> **Live Demo Notice:** The backend is deployed on Render's free tier. The initial request after inactivity may take up to 30–60 seconds while the service starts. Subsequent requests respond normally.
+
+---
+
+## 🛠️ Getting Started
+
+### Clone the repository
+
+```bash
+git clone https://github.com/viplavg/VG-Portfolio.git
+```
+
+### Navigate to the project
+
+```bash
+cd VG-Portfolio
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start the development server
+
+```bash
+npm run dev
+```
+
+### Build for production
+
+```bash
+npm run build
+```
+
+---
+
+## 📫 Connect With Me
+
+**Portfolio**
+- https://viplavgupta-portfolio.vercel.app/
+
+**LinkedIn**
+- https://linkedin.com/in/viplavg
+
+**GitHub**
+- https://github.com/viplavg
+
+**Email**
+- viplavg1999@gmail.com
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+⭐ If you like this project, feel free to fork it or leave a star on GitHub.
