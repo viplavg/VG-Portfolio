@@ -18,7 +18,7 @@ export const experienceData = [
     company: "Bold Technology Systems",
     location: "Noida, India",
     duration: "Jan 2024 – Mar 2025",
-    technologies: ["React.js", "JavaScript", "Responsive Design"],
+    technologies: ["React.js", "JavaScript", "Responsive Design", "REST APIs"],
     highlights: [
       "Owned frontend development for LiveCareer, a resume-building platform used across 23 countries.",
       "Implemented responsive UX improvements that contributed to a 20% increase in engagement and a 15% reduction in bounce rate.",
@@ -31,7 +31,7 @@ export const experienceData = [
     company: "Metaverk",
     location: "Gurgaon, India",
     duration: "Aug 2023 – Nov 2023",
-    technologies: ["React.js", "Node.js", "MongoDB", "Express.js"],
+    technologies: ["React.js", "Node.js", "Express.js", "MongoDB"],
     highlights: [
       "Contributed to full-stack development of the Exuber.ai product by building user-facing features and supporting APIs.",
       "Presented regular product demos to international clients and translated technical capabilities into business value.",
@@ -43,11 +43,12 @@ export const experienceData = [
     company: "Tata Consultancy Services",
     location: "Noida, India",
     duration: "Jul 2021 – Aug 2023",
-    technologies: ["React.js", "JavaScript", "REST APIs"],
+    technologies: ["React.js", "Java", "Spring Boot", "REST APIs"],
     highlights: [
-      "Worked as a frontend developer on iRail, a railway optimization and scheduling product for the European region.",
-      "Maintained and enhanced a production-grade application for over two years, delivering reliable incremental improvements.",
-      "Received the Elevate Wings Award and Xccelerate Warrior Award for consistent performance and full-stack development.",
+      "Contributed to the development and maintenance of iRail, an enterprise railway scheduling application for European clients.",
+      "Developed responsive frontend features using React.js and integrated REST APIs to deliver scalable user-facing functionality.",
+      "Built and enhanced RESTful APIs using Java and Spring Boot while contributing to backend business logic and production support.",
+      "Received the Elevate Wings Award for Full Stack Web Development and the Xccelerate Warrior Award for consistent performance.",
     ],
   },
 ];

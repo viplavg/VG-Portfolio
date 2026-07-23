@@ -1,44 +1,66 @@
 export const skillsData = [
   {
     id: 1,
-    category: "Frontend",
+    category: "Programming Languages",
     skills: [
-      "React.js",
-      "Next.js",
       "JavaScript",
       "TypeScript",
-      "HTML5",
-      "CSS3",
-      "Responsive Design",
-      "Tailwind CSS"
+      "Core Java",
     ],
   },
   {
     id: 2,
-    category: "Backend",
+    category: "Frontend",
     skills: [
-      "Node.js",
-      "Express.js",
-      "REST APIs",
+      "React.js",
+      "Next.js",
+      "HTML5",
+      "CSS3",
+      "Responsive Design",
+      "Tailwind CSS",
     ],
   },
   {
     id: 3,
+    category: "Backend",
+    skills: [
+      "Node.js",
+      "Express.js",
+      "Spring Boot",
+      "Spring Security",
+      "Spring Data JPA",
+      "Hibernate",
+      "REST APIs",
+      "JWT Authentication",
+    ],
+  },
+  {
+    id: 4,
     category: "Database",
-    skills: ["MongoDB", "PostgreSQL"],
-  },
-  {
-    id: 4,
-    category: "State Management",
-    skills: ["Redux", "Context API", "Zustand"],
-  },
-  {
-    id: 4,
-    category: "Data Fetching & Caching",
-    skills: ["React Query", "Axios"],
+    skills: [
+      "MongoDB",
+      "PostgreSQL",
+    ],
   },
   {
     id: 5,
+    category: "State Management",
+    skills: [
+      "Redux",
+      "Context API",
+      "Zustand",
+    ],
+  },
+  {
+    id: 6,
+    category: "Data Fetching & Caching",
+    skills: [
+      "React Query",
+      "Axios",
+    ],
+  },
+  {
+    id: 7,
     category: "UI & Styling",
     skills: [
       "Material UI",
@@ -46,12 +68,11 @@ export const skillsData = [
       "React Bootstrap",
       "SASS",
       "CSS Modules",
-      "React-Bootstrap",
-      "Styled Components"
+      "Styled Components",
     ],
   },
   {
-    id: 6,
+    id: 8,
     category: "Tools & Workflow",
     skills: [
       "Git",
@@ -65,13 +86,13 @@ export const skillsData = [
     ],
   },
   {
-    id: 7,
+    id: 9,
     category: "AI-Assisted Development",
     skills: [
-        "Cursor",
-        "Claude Code",
-        "GitHub Copilot",
-        "ChatGPT"
+      "Cursor",
+      "Claude Code",
+      "GitHub Copilot",
+      "ChatGPT",
     ],
   },
 ];

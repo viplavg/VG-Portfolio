@@ -84,6 +84,17 @@
   font-weight: 600;
 }
 
+.project-card__demo-note {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.project-card__demo-note strong {
+  color: var(--text-primary);
+}
+
 .project-card__actions {
   display: flex;
   flex-wrap: wrap;

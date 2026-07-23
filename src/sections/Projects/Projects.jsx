@@ -41,6 +41,12 @@ const Projects = () => {
                       ))}
                     </div>
 
+                    {project.demoNote && (
+                      <p className="project-card__demo-note">
+                        <strong>Live Demo Notice:</strong> {project.demoNote}
+                      </p>
+                    )}
+
                     {hasProjectLinks && (
                       <div className="project-card__actions">
                         {project.githubUrl && (

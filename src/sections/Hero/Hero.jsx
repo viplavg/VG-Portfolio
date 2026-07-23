@@ -10,13 +10,14 @@ const Hero = () => {
           <span className="hero__eyebrow">Hi, I’m Viplav Gupta</span>
 
           <h1 className="hero__title">
-            Full-Stack Engineer
+            Full-Stack Software Engineer
             <span>focused on scalable React products.</span>
           </h1>
 
           <p className="hero__description">
-            I build scalable React applications and modern web products with 5
-            years of experience across frontend and backend development.
+            Full-Stack Software Engineer with 5 years of experience building
+            scalable, modern web applications using React, Node.js, Java, and
+            Spring Boot.
           </p>
 
           <div className="hero__actions">
@@ -77,7 +78,9 @@ const Hero = () => {
                     skills: [
                         "React",
                         "Node.js",
-                        "MongoDB"
+                        "MongoDB",
+                        "Java",
+                        "Spring Boot"
                     ]
                     };`}
             </pre>
